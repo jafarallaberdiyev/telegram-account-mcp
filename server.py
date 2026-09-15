@@ -466,7 +466,7 @@ if __name__ == "__main__":
     # Render yoki SSE rejimida ishga tushirish
     if "PORT" in os.environ or args.transport == "sse":
         print(f"🚀 Telegram MCP server SSE rejimida ishga tushmoqda: {args.host}:{args.port}")
-        mcp.run(transport="sse")
+        mcp.run(transport="sse", host=args.host, port=args.port)
     else:
         # Claude Desktop uchun standart stdio rejimi
         mcp.run()
